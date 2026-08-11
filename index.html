@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringga's Pizzas</title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>Pizza Form Delivery</h1>
+        <p><i>Pizza Lezat, cepat sampai rumah anda 🍕</i></p>
+        <nav>
+            <a href="#menu">Lihat Menu</a>
+            <a href="#order">Pesan Sekarang</a>
+            <a href="#kontak">Kontak Kami</a>
+        </nav>
+        <hr>
+    </header>
+    <!-- PROMO SECTION -->
+
+    <section>
+        <h2>Promo Hari ini!</h2>
+        <img src="promo_pizza.png" alt="promo banner" width="600px">
+    </section>
+    <p><mark>Diskon 30%</mark>untuk pizza berukuran besar!</p>
+    <ul>
+        <li>Rotinya Empuk</li>
+        <li>Harga Terjangkau</li>
+        <li>Kaya akan rempah</li>
+    </ul>
+    <p>Terbuat dari bahan-bahan pilihan dan berkualitas, dengan bumbu rahasia keluarga yang membuat cita rasanya tak terlupakan. 😋</p>
+    
+<!-- MENU -->
+ <Section id="menu">
+    <h2>Menu Pizza</h2>
+    
+        <table border="1">
+            <thead>
+<tr>
+            <th>Nama</th>
+            <th>Ukuran</th>
+            <th>Harga</th>
+        </tr>
+        <tr>
+            <td>
+                Pizza Mozarella
+            </td>
+            <td> large</td>
+            <td> Rp. 120,000 </td>
+        </tr>
+        <tr>
+            <td>
+                Pizza Mushroom
+            </td>
+            <td>Medium</td>
+            <td> Rp. 120,000 </td>
+        </tr>
+        <tr>
+            <td>
+                Pizza Sausage
+            </td>
+            <td>Medium</td>
+            <td> Rp. 120,000 </td>
+        </tr>
+        <tr>
+            <td>
+                Pizza Supreme
+            </td>
+            <td>Small</td>
+            <td> Rp. 99,000 </td>
+        </tr>
+            </thead>
+        </table>
+        
+    
+ </Section>
+ 
+ <section id="order">
+<h2> Pesan Disini</h2>
+
+    <!-- FORM -->
+    <form action="https://formspree.io/f/xkjwjbpw" method="post">
+        <label for="name">Nama Pemesan:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <br>
+        <label for="ukuran">Size Pizza:</label><br>
+        <select id="ukuran" name="ukuran">
+            <option value="besar">Large</option>
+            <option value="sedang">Medium</option>
+            <option value="kecil">Small</option>
+        </select><br>
+        
+        <p>Pilih Toping</p>
+        <input type="checkbox" name="toping" value="keju" id="keju" ><label for="keju">Keju</label>
+        <input type="checkbox" name="toping" value="daging" id="daging" ><label for="daging">Daging</label>
+        <input type="checkbox" name="toping" value="jamur" id="jamur" ><label for="jamur">Jamur</label>
+        <input type="checkbox" name="toping" value="paprika" id="paprika" ><label for="paprika">Paprika</label>
+        <br><br>
+
+        <p>Jenis Saus</p>
+        <input type="radio" name="saus" value="tomat" id="tomat"><label for="tomat">Saus Tomat</label>
+        <input type="radio" name="saus" value="BBQ" id="BBQ"><label for="BBQ">Saus BBQ</label>
+        <input type="radio" name="saus" value="cheese" id="cheese"><label for="cheese">Saus Cheese</label>
+        <br><br>
+
+        <label for="catatan" name="catatan">Catatan</label>
+        <br><textarea name="catatan" id="catatan" cols="50" rows="5"></textarea>
+        <br>
+
+        <button type="submit">Pesan Sekarang</button> <button type="reset">Reset</button>
+
+        <br><br>
+    
+    </form>
+ </section>
+
+ <section id="kontak">
+    <h2>Hubungi Kami</h2>
+    <p>Alamat: 📍 Jln. Pizza No.1 </p>
+    <p>Email : 📧 [EMAIL_ADDRESS]</p>
+    <p>Telepon: 📱 <a target="_blank" href="https://wa.me/6281312312312?text=Halo%20Saya%20Mau%20Pesan%20Pizza">Kirim Pesan</a></p>
+
+ </section>
+
+ <!-- footer -->
+
+ <footer>
+    <hr>
+    <p>Copyright &copy; 2024. Ringga's Pizzas. All rights reserved.</p>
+ </footer>
+ 
+</body>
+
+</html>
