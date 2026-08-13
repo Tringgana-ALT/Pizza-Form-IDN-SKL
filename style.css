@@ -366,3 +366,11 @@ button:active {
     margin: 0;
     opacity: 0.8;
 }
+
+/* ponytail: minimum responsive tweaks */
+@media (max-width: 768px) {
+    .header-bar { flex-direction: column; text-align: center; gap: 10px; }
+    .nav-menu { flex-wrap: wrap; justify-content: center; }
+    .promo img { max-width: 100%; height: auto; }
+    .promo ul { flex-direction: column; gap: 10px; padding: 0; }
+}
