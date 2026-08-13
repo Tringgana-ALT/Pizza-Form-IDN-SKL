@@ -1,0 +1,260 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  
+body {
+    font-family: "Poppins", sans-serif;
+    
+}
+
+.header-bar {
+    padding: 20px 40px;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    
+    border-bottom: 2px solid black;
+    
+    /* ✅ Hapus/ubah space-between, ganti dengan gap */
+    justify-content: space-between; /* atau hapus baris ini (default flex) */
+    gap: 2rem; /* 👈 Atur jarak antara logo & nav (bisa 1rem, 2rem, 30px, dll) */
+}
+
+.header-bar h1 {
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 400;
+    color: #d32f2f;
+    margin: 0;
+}
+
+.header-bar p {
+    font-family: 'Poppins' sans-serif;
+    margin: 0;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header-logo{
+     display: flex;
+    flex-direction: column; /* Susun vertikal (atas-bawah) */
+    gap: 0.25rem; 
+}
+
+/* 💡 Opsional: beri jarak antar link di dalam nav */
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.promo{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.promo h2 {
+    color: #d32f2f;
+}
+
+mark {
+    color: black;
+    background-color: rgba(255, 0, 0, 0.452);
+    border-radius: 2px;
+    padding: 5px;
+    font-weight: 600;
+}
+
+.promo ul {
+    list-style-type: square;
+    display: flex;
+    gap: 30px;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.promo img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.menu h2 {
+    color: #d32f2f; 
+}
+
+.menu table{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-width: 2px;
+    width: 70%;
+    border-collapse: collapse; 
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    min-width: 400px;
+    border-radius: 12px;
+    border-color: #b71c1c2a;
+    
+}
+
+.menu th {
+    height: 55px;
+    background-color: rgba(255, 0, 0, 0.062);
+    
+}
+.menu td {
+    height: 50px;         /* Setiap baris minimal tingginya 50px */
+    min-height: 50px;     /* Lebih aman pakai min-height */
+}
+
+/* 1. Container Utama Form */
+.form-order-main {
+    max-width: 600px;       /* Batasi lebar agar tidak terlalu melebar */
+    margin: 40px auto;      /* Posisi tengah halaman */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;    /* Sudut melengkung */
+    font-family: "Poppins", Geneva, Tahoma, sans-serif;
+}
+
+.form-order-main h2 {
+    text-align: center;
+    color: #d32f2f;         /* Warna merah pizza */
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+/* 2. Label & Input Text/Email/Select */
+.form-order-main label {
+    display: block;         /* Agar label berada di atas input */
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-order-main input[type="text"],
+.form-order-main input[type="email"],
+.form-order-main select,
+.form-order-main textarea {
+    width: 100%;            /* Lebar penuh */
+    padding: 12px;
+    margin-bottom: 20px;    /* Jarak antar elemen */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Agar padding tidak menambah lebar */
+    transition: border-color 0.3s;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Efek saat diklik (Focus) */
+/* .form-order-main input:focus,
+.form-order-main select:focus,
+.form-order-main textarea:focus {
+    border-color: #d32f2f;
+    outline: none;
+    box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+} */
+
+/* 3. Section Pilihan (Toping & Saus) */
+.form-order-main p {
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #444;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+/* Wrapper untuk checkbox/radio agar rapi (Opsional tapi disarankan) */
+.checkbox-group, 
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;              /* Jarak antar pilihan */
+    margin-bottom: 20px;
+}
+
+/* Styling Label Checkbox & Radio */
+.checkbox-group label,
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 0.95rem;
+}
+
+/* 4. Tombol (Buttons) */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.form-order-main button {
+    flex: 1;                /* Tombol membagi lebar sama rata */
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+/* Tombol Submit */
+button[type="submit"] {
+    background-color: #d32f2f;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #b71c1c;
+}
+
+/* Tombol Reset */
+button[type="reset"] {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+button[type="reset"]:hover {
+    background-color: #bdbdbd;
+}
+
+button:active {
+    transform: scale(0.98); /* Efek tekan */
+}
+
+
+/* 1. Container Utama Kontak */
+.contact {
+    background-color: #f9f9f9; /* Warna latar belakang agak abu */
+    padding: 40px 20px;
+    text-align: center; /* Teks rata tengah */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contact h2 {
+    color: #d32f2f; /* Merah Pizza */
+    margin-bottom: 30px;
+}

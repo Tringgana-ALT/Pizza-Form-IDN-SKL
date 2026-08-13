@@ -6,36 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ringga's Pizzas</title>
     <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header>
+
+    <div class="container">
+<header class="header-bar">
+        <div class="header-logo">
         <h1>Pizza Form Delivery</h1>
         <p><i>Pizza Lezat, cepat sampai rumah anda 🍕</i></p>
-        <nav>
+        </div>
+        <nav class="nav-menu">
             <a href="#menu">Lihat Menu</a>
             <a href="#order">Pesan Sekarang</a>
             <a href="#kontak">Kontak Kami</a>
         </nav>
-        <hr>
+        
     </header>
     <!-- PROMO SECTION -->
 
-    <section>
+    <section class="promo">
         <h2>Promo Hari ini!</h2>
         <img src="promo_pizza.png" alt="promo banner" width="600px">
-    </section>
-    <p><mark>Diskon 30%</mark>untuk pizza berukuran besar!</p>
-    <ul>
+        <p><mark>Diskon 30%</mark>untuk pizza berukuran besar!</p>
+         <ul>
         <li>Rotinya Empuk</li>
         <li>Harga Terjangkau</li>
         <li>Kaya akan rempah</li>
-    </ul>
-    <p>Terbuat dari bahan-bahan pilihan dan berkualitas, dengan bumbu rahasia keluarga yang membuat cita rasanya tak terlupakan. 😋</p>
+        </ul>
+        <p>Terbuat dari bahan-bahan pilihan dan berkualitas, dengan bumbu rahasia keluarga yang membuat cita rasanya tak terlupakan. 😋</p>
+    </section>
     
 <!-- MENU -->
- <Section id="menu">
+ <Section id="menu" class="menu">
     <h2>Menu Pizza</h2>
     
         <table border="1">
@@ -49,7 +56,7 @@
             <td>
                 Pizza Mozarella
             </td>
-            <td> large</td>
+            <td> Large</td>
             <td> Rp. 120,000 </td>
         </tr>
         <tr>
@@ -79,52 +86,77 @@
     
  </Section>
  
- <section id="order">
-<h2> Pesan Disini</h2>
+ <!-- https://formspree.io/f/xkjwjbpw -->
+  <!-- https://formspree.io/f/mnpapvgd -->
+ <section id="order" class="form-order-main">
+    <h2>🍕 Pesan Disini</h2>
 
-    <!-- FORM -->
     <form action="https://formspree.io/f/xkjwjbpw" method="post">
-        <label for="name">Nama Pemesan:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
-        <br>
-        <label for="ukuran">Size Pizza:</label><br>
+        
+        <!-- Nama -->
+        <label for="name">Nama Pemesan:</label>
+        <input type="text" id="name" name="name" placeholder="Contoh: Budi Santoso" required>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="budi@email.com" required>
+
+        <!-- Ukuran -->
+        <label for="ukuran">Size Pizza:</label>
         <select id="ukuran" name="ukuran">
             <option value="besar">Large</option>
             <option value="sedang">Medium</option>
             <option value="kecil">Small</option>
-        </select><br>
+        </select>
         
+        <!-- Toping (Dibungkus div agar rapi) -->
         <p>Pilih Toping</p>
-        <input type="checkbox" name="toping" value="keju" id="keju" ><label for="keju">Keju</label>
-        <input type="checkbox" name="toping" value="daging" id="daging" ><label for="daging">Daging</label>
-        <input type="checkbox" name="toping" value="jamur" id="jamur" ><label for="jamur">Jamur</label>
-        <input type="checkbox" name="toping" value="paprika" id="paprika" ><label for="paprika">Paprika</label>
-        <br><br>
+        <div class="checkbox-group">
+            <input type="checkbox" name="toping" value="keju" id="keju">
+            <label for="keju">Keju</label>
 
+            <input type="checkbox" name="toping" value="daging" id="daging">
+            <label for="daging">Daging</label>
+
+            <input type="checkbox" name="toping" value="jamur" id="jamur">
+            <label for="jamur">Jamur</label>
+
+            <input type="checkbox" name="toping" value="paprika" id="paprika">
+            <label for="paprika">Paprika</label>
+        </div>
+
+        <!-- Saus (Dibungkus div agar rapi) -->
         <p>Jenis Saus</p>
-        <input type="radio" name="saus" value="tomat" id="tomat"><label for="tomat">Saus Tomat</label>
-        <input type="radio" name="saus" value="BBQ" id="BBQ"><label for="BBQ">Saus BBQ</label>
-        <input type="radio" name="saus" value="cheese" id="cheese"><label for="cheese">Saus Cheese</label>
-        <br><br>
+        <div class="radio-group">
+            <input type="radio" name="saus" value="tomat" id="tomat">
+            <label for="tomat">Saus Tomat</label>
 
-        <label for="catatan" name="catatan">Catatan</label>
-        <br><textarea name="catatan" id="catatan" cols="50" rows="5"></textarea>
-        <br>
+            <input type="radio" name="saus" value="BBQ" id="BBQ">
+            <label for="BBQ">Saus BBQ</label>
 
-        <button type="submit">Pesan Sekarang</button> <button type="reset">Reset</button>
+            <input type="radio" name="saus" value="cheese" id="cheese">
+            <label for="cheese">Saus Cheese</label>
+        </div>
 
-        <br><br>
+        <!-- Catatan -->
+        <label for="catatan">Catatan Tambahan:</label>
+        <textarea name="catatan" id="catatan" cols="30" rows="4" placeholder="Contoh: Jangan terlalu pedas..."></textarea>
+
+        <!-- Tombol -->
+        <div class="button-group">
+            <button type="submit">Pesan Sekarang 🚀</button>
+            <button type="reset">Reset ❌</button>
+        </div>
     
     </form>
- </section>
+</section>
 
- <section id="kontak">
+<!-- https://wa.me/6281312312312?text=Halo%20Saya%20Mau%20Pesan%20Pizza -->
+
+ <section id="kontak" class="contact">
     <h2>Hubungi Kami</h2>
     <p>Alamat: 📍 Jln. Pizza No.1 </p>
-    <p>Email : 📧 [EMAIL_ADDRESS]</p>
+    <p>Email : 📧 zabran_tringgana_07@idn.sch.id</p>
     <p>Telepon: 📱 <a target="_blank" href="https://wa.me/6281312312312?text=Halo%20Saya%20Mau%20Pesan%20Pizza">Kirim Pesan</a></p>
 
  </section>
@@ -135,7 +167,7 @@
     <hr>
     <p>Copyright &copy; 2024. Ringga's Pizzas. All rights reserved.</p>
  </footer>
- 
+    </div>
 </body>
 
 </html>
