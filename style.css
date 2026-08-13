@@ -93,6 +93,7 @@ mark {
     padding: 40px 20px;
     background-color: #fffaf0; /* Latar krem sangat muda */
     text-align: center;
+    font-family: "Poppins", sans-serif;
 }
 
 .menu h2 {
@@ -141,7 +142,7 @@ mark {
 
 /* Efek Hover pada Baris */
 .pizza-table tbody tr:hover {
-    background-color: #ffebee;
+    /* background-color: #ffebee; */
     cursor: default;
     transition: background 0.3s;
 }
